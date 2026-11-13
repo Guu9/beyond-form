@@ -154,7 +154,7 @@
 #beyond-form #fp-order .pattern-stack figure:nth-child(3) img{width:96px;height:96px}
 #beyond-form #fp-order .pattern-stack figcaption{font-size:12px;line-height:1.4;margin-top:3px}
 
-#beyond-form #flow-reflection{font:16px/1.55 Arial,Helvetica,sans-serif;background:#fff;color:#252525;padding:28px;box-sizing:border-box}#beyond-form #flow-reflection *{box-sizing:border-box}#beyond-form #flow-reflection .eyebrow{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#666}#beyond-form #flow-reflection h3{font-size:32px;line-height:1.15;font-weight:500;margin:12px 0}#beyond-form #flow-reflection p{margin:10px 0 20px;max-width:720px}#beyond-form #flow-reflection .toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid #aaa;padding:16px 0;font-size:13px}#beyond-form #flow-reflection button{font:inherit;touch-action:manipulation}#beyond-form #flow-reflection .restart{border:1px solid #777;border-radius:24px;padding:10px 18px;background:#fff;color:#252525;min-height:44px}#beyond-form #flow-reflection .field{position:relative;height:560px;background:#292039;isolation:isolate;overflow:hidden}#beyond-form #flow-reflection svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}#beyond-form #flow-reflection .word{position:absolute;transform:translate(-50%,-50%);max-width:165px;min-height:44px;border:0;border-radius:0;background:#292039;color:#F7F4FF;padding:10px 12px;font-size:14px;font-weight:400;line-height:1.3;touch-action:none;cursor:grab;z-index:2}#beyond-form #flow-reflection .word::after{content:'';position:absolute;left:calc(var(--port-x,50%) - 3px);top:calc(var(--port-y,100%) - 3px);width:6px;height:6px;border-radius:50%;background:#F7F4FF}#beyond-form #flow-reflection .word[aria-pressed=true]{color:#A3FF68;text-decoration:underline;text-underline-offset:5px}#beyond-form #flow-reflection .word.connected{color:var(--line);cursor:default}#beyond-form #flow-reflection .word.connected::after{background:var(--line)}#beyond-form #flow-reflection .target{position:absolute;transform:translate(-50%,-50%);width:158px;height:158px;border:0;border-radius:50%;padding:22px;font-size:18px;line-height:1.25;color:#292039;z-index:3}#beyond-form #flow-reflection .target small{display:block;font-size:11px;margin-top:10px}#beyond-form #flow-reflection .target[data-bin=show]{left:33%;top:46%;background:#E4B5AB}#beyond-form #flow-reflection .target[data-bin=more]{left:68%;top:61%;background:#E8D89F}#beyond-form #flow-reflection .target.over{outline:2px solid #F7F4FF;outline-offset:6px}#beyond-form #flow-reflection button:focus-visible{outline:2px solid #A3FF68;outline-offset:5px}#beyond-form #flow-reflection .feedback{min-height:82px;padding:16px 0;border-bottom:1px solid #aaa;font-size:15px;margin:0}#beyond-form #flow-reflection .note{font-size:12px;color:#666;margin-top:12px}#beyond-form #flow-reflection .hint{position:absolute;left:20px;bottom:12px;color:#c9bfd4;font-size:11px;pointer-events:none}
+#beyond-form #flow-reflection{font:16px/1.55 Arial,Helvetica,sans-serif;background:#fff;color:#252525;padding:28px;box-sizing:border-box}#beyond-form #flow-reflection *{box-sizing:border-box}#beyond-form #flow-reflection .eyebrow{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#666}#beyond-form #flow-reflection h3{font-size:32px;line-height:1.15;font-weight:500;margin:12px 0}#beyond-form #flow-reflection p{margin:10px 0 20px;max-width:720px}#beyond-form #flow-reflection .toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-size:13px}#beyond-form #flow-reflection button{font:inherit;touch-action:manipulation}#beyond-form #flow-reflection .restart{border:1px solid #777;border-radius:24px;padding:10px 18px;background:#fff;color:#252525;min-height:44px}#beyond-form #flow-reflection .field{position:relative;height:560px;background:#292039;isolation:isolate;overflow:hidden}#beyond-form #flow-reflection svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}#beyond-form #flow-reflection .word{position:absolute;transform:translate(-50%,-50%);max-width:165px;min-height:44px;border:0;border-radius:0;background:#292039;color:#F7F4FF;padding:10px 12px;font-size:14px;font-weight:400;line-height:1.3;touch-action:none;cursor:grab;z-index:2}#beyond-form #flow-reflection .word::after{content:'';position:absolute;left:calc(var(--port-x,50%) - 3px);top:calc(var(--port-y,100%) - 3px);width:6px;height:6px;border-radius:50%;background:#F7F4FF}#beyond-form #flow-reflection .word[aria-pressed=true]{color:#A3FF68;text-decoration:underline;text-underline-offset:5px}#beyond-form #flow-reflection .word.connected{color:var(--line);cursor:default}#beyond-form #flow-reflection .word.connected::after{background:var(--line)}#beyond-form #flow-reflection .target{position:absolute;transform:translate(-50%,-50%);width:158px;height:158px;border:0;border-radius:50%;padding:22px;font-size:18px;line-height:1.25;color:#292039;z-index:3}#beyond-form #flow-reflection .target small{display:block;font-size:11px;margin-top:10px}#beyond-form #flow-reflection .target[data-bin=show]{left:33%;top:46%;background:#E4B5AB}#beyond-form #flow-reflection .target[data-bin=more]{left:68%;top:61%;background:#E8D89F}#beyond-form #flow-reflection .target.over{outline:2px solid #F7F4FF;outline-offset:6px}#beyond-form #flow-reflection button:focus-visible{outline:2px solid #A3FF68;outline-offset:5px}#beyond-form #flow-reflection .feedback{min-height:82px;padding:16px 0;border-bottom:1px solid #aaa;font-size:15px;margin:0}#beyond-form #flow-reflection .note{font-size:12px;color:#666;margin-top:12px}#beyond-form #flow-reflection .hint{position:absolute;left:20px;bottom:12px;color:#c9bfd4;font-size:11px;pointer-events:none}
 @media(max-width:600px){#beyond-form #flow-reflection{padding:18px}#beyond-form #flow-reflection h3{font-size:27px}#beyond-form #flow-reflection .field{height:710px}#beyond-form #flow-reflection .word{font-size:13px;max-width:140px}#beyond-form #flow-reflection .target{width:124px;height:124px;padding:16px;font-size:16px}#beyond-form #flow-reflection .target[data-bin=show]{left:25%;top:66%}#beyond-form #flow-reflection .target[data-bin=more]{left:75%;top:80%}#beyond-form #flow-reflection .feedback{min-height:120px}}
 
 #beyond-form #flow-reflection .toolbar{flex-wrap:wrap}#beyond-form #flow-reflection .actions{display:flex;gap:8px;flex-wrap:wrap}
@@ -193,10 +193,36 @@ body{margin:0} .skip-link{position:absolute;left:12px;top:-80px;z-index:200;back
 /* Keep outlined headline words clear of adjacent lines. */
 #beyond-form .hero h1 .bubble{margin-block:.1em}
 
+/* Research connections: editorial tabs with full-width explanations. */
+#beyond-form .research-connection.has-research-tabs{max-width:none;width:100%;border-left:0;padding:0;margin-top:30px}
+#beyond-form .research-tabs{display:flex;flex-wrap:wrap;gap:5px;border-bottom:1px solid #222;margin-top:20px}
+#beyond-form .research-tabs button{appearance:none;background:#fff;color:#222;border:1px solid #222;border-bottom:0;border-radius:8px 8px 0 0;padding:13px 20px;font:500 15px/1.4 Arial,Helvetica,sans-serif;cursor:pointer}
+#beyond-form .research-tabs button[aria-selected="true"]{background:#222;color:#fff}
+#beyond-form .research-tabs button:focus-visible{outline:3px solid #8965cf;outline-offset:3px}
+#beyond-form .research-panels{padding-top:20px;min-height:126px}
+#beyond-form .research-connection.has-research-tabs .research-panels p{max-width:none;width:100%;margin:0 0 20px;font-size:16px;line-height:1.7}
+#beyond-form .research-panels [hidden]{display:none}
+@media(max-width:600px){#beyond-form .research-tabs button{padding:11px 12px;font-size:14px}#beyond-form .research-panels{min-height:210px}}
+/* Reflection explanations share the editorial tab treatment. */
+#beyond-form #flow-reflection>p{max-width:none;width:100%}
+#beyond-form #flow-reflection .concept-explanations{margin:24px 0}
+#beyond-form #flow-reflection .research-panels p{max-width:none;width:100%}
+#beyond-form #flow-reflection .research-panels{min-height:100px}
+#beyond-form #flow-reflection .research-tabs button{font-size:14px;padding:12px 16px}
+#beyond-form #flow-reflection .research-tabs button:focus-visible{outline-color:#8965cf}
+/* Remove redundant separators around the reflection explanations. */
+#beyond-form #flow-reflection .feedback{border-bottom:0}
+#beyond-form #flow-reflection{border-bottom:0}
+/* Keep the physical reference proportional to its accompanying text. */
+#beyond-form .reflection-photo{grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:36px;align-items:center}
+#beyond-form .reflection-photo>figure,#beyond-form .reflection-photo>div{min-width:0}
+#beyond-form .reflection-photo img{max-width:100%;max-height:320px;object-fit:contain;object-position:left center}
+#beyond-form .reflection-photo figcaption{font-size:12px;line-height:1.6;margin-top:12px}
+@media(max-width:650px){#beyond-form .reflection-photo{grid-template-columns:minmax(0,1fr);gap:24px}#beyond-form .reflection-photo>figure{max-width:340px;width:100%}}
 /* Editorial introduction: headline right, question and explanation left. */
 #beyond-form .hero-opening{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);column-gap:60px;align-items:start}
 #beyond-form .hero-opening h1{grid-column:2;grid-row:1;margin:24px 0 0;font-size:clamp(38px,4.5vw,70px);letter-spacing:-2.5px}
-#beyond-form .hero-opening .intro{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:24px;padding-top:clamp(220px,19vw,300px)}
+#beyond-form .hero-opening .intro{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:24px;padding-top:32px}
 #beyond-form .hero-opening .intro .lead{margin:0}
 #beyond-form .hero-opening .intro p:last-child{margin-bottom:0}
 @media(max-width:760px){
@@ -205,3 +231,17 @@ body{margin:0} .skip-link{position:absolute;left:12px;top:-80px;z-index:200;back
  #beyond-form .hero-opening .intro{padding-top:0;gap:20px}
  #beyond-form .hero-opening h1 .bubble{padding-inline:10px}
 }
+
+/* Sources use spacing and type hierarchy instead of dividing rules. */
+#beyond-form #fp-sources .source-requirements{border:0;padding:0;margin:32px 0 44px}
+#beyond-form #fp-sources .source-requirements strong{display:block;font-size:20px;font-weight:500;line-height:1.35;margin-bottom:12px}
+#beyond-form #fp-sources .bibliography-heading{font-size:24px;font-weight:500;line-height:1.3;margin:48px 0 24px}
+#beyond-form #fp-sources .source-row{border:0;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:0;margin:0 0 32px}
+#beyond-form #fp-sources .source-row>span{font-size:11px;line-height:1.6;letter-spacing:.04em;padding-top:2px;overflow-wrap:normal}
+#beyond-form #fp-sources .source-row p,#beyond-form #fp-sources li{font-size:15px;line-height:1.65;margin:8px 0;color:#555}
+#beyond-form #fp-sources .source-row .bib-entry{font-size:16px;color:#222;margin:12px 0 8px}
+#beyond-form #fp-sources .source-row .source-role{font-size:13px;font-weight:500;line-height:1.5;margin-bottom:8px}
+#beyond-form #fp-sources .source-row .source-use{font-size:15px;margin:0 0 12px}
+#beyond-form #fp-sources .source-row strong{font-size:18px;font-weight:500;line-height:1.4}
+#beyond-form #fp-sources>p,#beyond-form #fp-sources .source-requirements p{font-size:16px;line-height:1.65}
+@media(max-width:600px){#beyond-form #fp-sources .source-row{grid-template-columns:1fr;gap:6px}#beyond-form #fp-sources .bibliography-heading{font-size:22px}}

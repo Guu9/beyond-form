@@ -12,6 +12,14 @@ const items=[
 {id:'variation',label:'Geometric variation',bin:'show',why:'We can compare the shapes produced by different parameter settings.'},
 {id:'accessibility',label:'Accessibility',bin:'more',why:'Accessibility depends on routes, barriers, dimensions, and user needs.'}
 ];
+const explanations=document.createElement('section');
+explanations.className='research-connection concept-explanations';
+const explanationHeading=document.createElement('strong');
+explanationHeading.textContent='Explore the eight concepts';
+explanations.append(explanationHeading);
+items.forEach(item=>{const p=document.createElement('p'),label=document.createElement('strong');label.textContent=item.label;p.append(label,document.createTextNode(' '+item.why));explanations.append(p);});
+feedback.after(explanations);
+function showExplanation(item){explanations.dispatchEvent(new CustomEvent('show-concept',{detail:items.indexOf(item)}));}
 const colors={show:'#E4B5AB',more:'#E8D89F'},desktop=[[14,13],[39,9],[65,12],[87,21],[12,53],[89,57],[28,84],[69,90]];
 let selected=null,pointer=null,connected=[],nodes=[],suppressClick=false,positions=null;
 function validPositions(v){return Array.isArray(v)&&v.length===8&&v.every(p=>Array.isArray(p)&&p.length===2&&p.every(n=>Number.isFinite(n)&&n>=0&&n<=1));}
@@ -102,7 +110,6 @@ const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttri
 });
 const crossings=crossingPoints(routed);
 crossings.forEach(c=>{const mark=document.createElementNS('http://www.w3.org/2000/svg','circle');mark.setAttribute('class','crossing-mark');mark.setAttribute('cx',c.x);mark.setAttribute('cy',c.y);mark.setAttribute('r','4.5');mark.setAttribute('fill','#292039');mark.setAttribute('stroke','#F7F4FF');mark.setAttribute('stroke-width','1.5');paths.append(mark);});
-root.querySelector('.note').textContent='○ Marked crossing: paths cross here but do not join. '+crossings.length+' crossing'+(crossings.length===1?'':'s')+'.';
 return blockedCount;
 }
 function layout(fresh=false){
@@ -133,9 +140,9 @@ if(fresh||!valid){
 nodes.forEach((n,i)=>{n.style.left=positions[i][0]*w+'px';n.style.top=positions[i][1]*h+'px';});draw();
 }
 function select(id){selected=id;nodes.forEach(n=>n.setAttribute('aria-pressed',String(n.dataset.id===id)));}
-function connect(bin){if(!selected){feedback.textContent='Select a word first, then choose a destination.';return;}const item=items.find(i=>i.id===selected);if(item.bin!==bin){feedback.textContent=`${item.label} belongs in “${item.bin==='show'?'The models reveal':'We need more evidence'}”. ${item.why}`;return;}connected.push(item.id);if(draw()){connected.pop();draw();feedback.textContent='Correct destination, but the words or bubbles leave no route. Shuffle to create more space.';return;}nodes[items.indexOf(item)].classList.add('connected');feedback.textContent=item.label+': '+item.why+(connected.length===8?' All eight connected. Your drawing brings the model’s possibilities and limits together.':'');select(null);root.querySelector('.progress').textContent=`${connected.length} of 8 connected`;draw();save();}
+function connect(bin){if(!selected){feedback.textContent='Select a word first, then choose a destination.';return;}const item=items.find(i=>i.id===selected);if(item.bin!==bin){feedback.textContent=`${item.label} belongs in “${item.bin==='show'?'The models reveal':'We need more evidence'}”. ${item.why}`;return;}connected.push(item.id);if(draw()){connected.pop();draw();feedback.textContent='Correct destination, but the words or bubbles leave no route. Shuffle to create more space.';return;}nodes[items.indexOf(item)].classList.add('connected');showExplanation(item);feedback.textContent=item.label+' connected.'+(connected.length===8?' All eight connected. Your drawing brings the model’s possibilities and limits together.':'');select(null);root.querySelector('.progress').textContent=`${connected.length} of 8 connected`;draw();save();}
 items.forEach((item,i)=>{const b=document.createElement('button');b.type='button';b.className='word';b.textContent=item.label;b.dataset.id=item.id;b.style.setProperty('--line',colors[item.bin]);b.setAttribute('aria-pressed','false');if(connected.includes(item.id))b.classList.add('connected');field.append(b);nodes.push(b);
-b.addEventListener('click',()=>{if(suppressClick){suppressClick=false;return;}if(connected.includes(item.id)){feedback.textContent=item.label+': '+item.why;return;}select(item.id);feedback.textContent=item.label+' selected. Choose a destination.';});
+b.addEventListener('click',()=>{if(suppressClick){suppressClick=false;return;}if(connected.includes(item.id)){showExplanation(item);feedback.textContent=item.label+' — explanation selected below.';return;}select(item.id);feedback.textContent=item.label+' selected. Choose a destination.';});
 b.addEventListener('pointerdown',e=>{if(connected.includes(item.id)||e.button!==0)return;select(item.id);pointer={id:e.pointerId,index:i,startX:e.clientX,startY:e.clientY,moved:false};b.setPointerCapture(e.pointerId);});
 b.addEventListener('pointermove',e=>{if(!pointer||pointer.id!==e.pointerId)return;if(Math.hypot(e.clientX-pointer.startX,e.clientY-pointer.startY)>5)pointer.moved=true;if(!pointer.moved)return;const r=field.getBoundingClientRect();draft.setAttribute('d',curve(center(b),{x:e.clientX-r.left,y:e.clientY-r.top},i));root.querySelectorAll('.target').forEach(t=>{const q=t.getBoundingClientRect();t.classList.toggle('over',e.clientX>=q.left&&e.clientX<=q.right&&e.clientY>=q.top&&e.clientY<=q.bottom);});});
 b.addEventListener('pointerup',e=>{if(!pointer||pointer.id!==e.pointerId)return;const moved=pointer.moved;suppressClick=moved;pointer=null;draft.setAttribute('d','');const target=[...root.querySelectorAll('.target')].find(t=>{const q=t.getBoundingClientRect();return e.clientX>=q.left&&e.clientX<=q.right&&e.clientY>=q.top&&e.clientY<=q.bottom;});root.querySelectorAll('.target').forEach(t=>t.classList.remove('over'));if(moved&&target)connect(target.dataset.bin);});

@@ -1,0 +1,3 @@
+// Browser-local progress. Merge the experiments and Reflection snapshots.
+(()=>{const key='beyond-form-progress-v1';let saved={};try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch{};
+window.openai={widgetState:{...saved,...saved.privateContent},setWidgetState:async next=>{saved={...saved,...next,privateContent:{...saved.privateContent,...next.privateContent}};window.openai.widgetState={...saved,...saved.privateContent};try{localStorage.setItem(key,JSON.stringify(saved))}catch{}}};})();

@@ -192,3 +192,16 @@ body{margin:0} .skip-link{position:absolute;left:12px;top:-80px;z-index:200;back
 
 /* Keep outlined headline words clear of adjacent lines. */
 #beyond-form .hero h1 .bubble{margin-block:.1em}
+
+/* Editorial introduction: headline right, question and explanation left. */
+#beyond-form .hero-opening{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);column-gap:60px;align-items:start}
+#beyond-form .hero-opening h1{grid-column:2;grid-row:1;margin:24px 0 0;font-size:clamp(38px,4.5vw,70px);letter-spacing:-2.5px}
+#beyond-form .hero-opening .intro{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:24px;padding-top:clamp(220px,19vw,300px)}
+#beyond-form .hero-opening .intro .lead{margin:0}
+#beyond-form .hero-opening .intro p:last-child{margin-bottom:0}
+@media(max-width:760px){
+ #beyond-form .hero-opening{display:flex;flex-direction:column;gap:30px}
+ #beyond-form .hero-opening h1{font-size:clamp(36px,7.5vw,56px);letter-spacing:-1.8px;margin:22px 0 0}
+ #beyond-form .hero-opening .intro{padding-top:0;gap:20px}
+ #beyond-form .hero-opening h1 .bubble{padding-inline:10px}
+}

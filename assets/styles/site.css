@@ -189,3 +189,6 @@
 #beyond-form #bf-growth .sim-view{background:#292039;border-color:#292039}
 #beyond-form .reflection-sort [hidden]{display:none!important}
 body{margin:0} .skip-link{position:absolute;left:12px;top:-80px;z-index:200;background:white;color:#222;padding:12px}.skip-link:focus{top:8px}
+
+/* Keep outlined headline words clear of adjacent lines. */
+#beyond-form .hero h1 .bubble{margin-block:.1em}

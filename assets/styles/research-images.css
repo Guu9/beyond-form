@@ -1,0 +1,11 @@
+#fp-research img[role="button"] { cursor: zoom-in; }
+#fp-research img[role="button"]:focus-visible { outline: 3px solid #baff29; outline-offset: 5px; }
+.research-image-viewer { box-sizing: border-box; width: min(1200px, 94vw); max-width: 94vw; max-height: 94dvh; margin: auto; padding: 60px 24px 20px; border: 0; border-radius: 16px; background: #202020; color: #fff; overflow: auto; }
+.research-image-viewer::backdrop { background: rgb(0 0 0 / 82%); }
+.research-image-large { display: block; width: 100%; height: auto; max-height: 72dvh; object-fit: contain; }
+.research-image-close { position: absolute; top: 12px; right: 16px; padding: 8px 16px; border: 1px solid #aaa; border-radius: 24px; background: #202020; color: white; font: inherit; cursor: pointer; }
+.research-image-close:focus-visible, .research-image-caption a:focus-visible { outline: 3px solid #baff29; outline-offset: 3px; }
+.research-image-caption { font: 14px/1.6 Arial, sans-serif; }
+.research-image-caption p { margin: 12px 0 0; }
+.research-image-caption a { color: inherit; text-decoration: underline; }
+@media (max-width: 600px) { .research-image-viewer { padding: 58px 12px 16px; } }

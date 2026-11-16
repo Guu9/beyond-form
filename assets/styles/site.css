@@ -245,3 +245,11 @@ body{margin:0} .skip-link{position:absolute;left:12px;top:-80px;z-index:200;back
 #beyond-form #fp-sources .source-row strong{font-size:18px;font-weight:500;line-height:1.4}
 #beyond-form #fp-sources>p,#beyond-form #fp-sources .source-requirements p{font-size:16px;line-height:1.65}
 @media(max-width:600px){#beyond-form #fp-sources .source-row{grid-template-columns:1fr;gap:6px}#beyond-form #fp-sources .bibliography-heading{font-size:22px}}
+
+/* One centered editorial grid; section backgrounds remain edge to edge. */
+#beyond-form{--content-width:1440px;--page-gutter:30px;--content-inset:max(var(--page-gutter),calc((100% - var(--content-width))/2))}
+#beyond-form .mast,#beyond-form .strip,#beyond-form .hero,#beyond-form .research-shell,#beyond-form .wide-section,#beyond-form footer{padding-inline:var(--content-inset)}
+#beyond-form .research-shell{border-inline:0}
+@media(max-width:1000px) and (min-width:761px){#beyond-form .hero-opening{gap:32px}#beyond-form .hero-opening h1{font-size:38px;letter-spacing:-1.5px}}
+@media(max-width:760px){#beyond-form{--page-gutter:20px}#beyond-form .mast{padding-inline:0}}
+@media(max-width:440px){#beyond-form{--page-gutter:14px}}
